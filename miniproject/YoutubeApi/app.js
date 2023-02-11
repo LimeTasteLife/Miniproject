@@ -2,11 +2,11 @@ const express = require('express');
 const path = require('path');
 const axios = require('axios');
 const { GoogleSpreadsheet } = require('google-spreadsheet');
-const creds = require('./custom-tine-377517-bf470de263b8.json');
+const creds = require('./json파일');
 
 
 const doc = new GoogleSpreadsheet("1l1DIoRJmKOeqUFPC4kdSXwDik1hVDAM5yilkN4LqUTo");
-const YOUTUBE_API_KEY = 'AIzaSyAElt4WvF2lfO7IyH3AfpoawEDLkwCgu5w';
+const YOUTUBE_API_KEY = '';
 
 async function connectWithSheet() {
     await doc.useServiceAccountAuth(creds);
