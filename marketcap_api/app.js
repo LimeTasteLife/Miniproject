@@ -21,7 +21,7 @@ const coinIds = {
 }
 
 const fetchOHLCVData = async (id, symbol) => {
-  const url = `https://pro-api.coinmarketcap.com/v2/cryptocurrency/ohlcv/historical?id=${id}&time_start=2022-04-14&convert=USD&count=5000`;
+  const url = `https://pro-api.coinmarketcap.com/v2/cryptocurrency/ohlcv/historical?id=${id}&time_start=2023-01-17&convert=USD&count=5000&time_period=hourly&interval=1h`;
 
   const headers = {
     'X-CMC_PRO_API_KEY': api_key,
@@ -66,7 +66,7 @@ const main = async () => {
 
     const fields = ['time_open', 'time_close', 'open', 'high', 'low', 'close', 'volume', 'market_cap'];
     const csvUSD = json2csv(csvDataUSD, { fields });
-    fs.writeFileSync(`./${symbol}_USD(6h_6month).csv`, csvUSD);
+    fs.writeFileSync(`./${symbol}_USD(1h_3month).csv`, csvUSD);
   }
 
   console.log('All CSV files have been successfully created.');
