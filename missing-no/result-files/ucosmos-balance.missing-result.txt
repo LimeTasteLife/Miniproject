@@ -13,4 +13,4 @@ bonded_tokens_pool,0.014938
 distribution,0.014938
 not_bonded_tokens_pool,0.014938
 
-Most Frequent Missing Value: 0.015353
+가장 빈번한 누락 값: 0.015353
