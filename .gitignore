@@ -1,0 +1,10 @@
+
+
+.env
+*/.env/*
+
+*/.ipynb_checkpoints/*
+*/.ipynb_checkpoints
+
+*/missing-no/data/*
+*/missing-no/result-files/*
