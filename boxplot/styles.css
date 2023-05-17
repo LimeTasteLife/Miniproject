@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+#chart, #chart2 {
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin-bottom: 20px;
+}
+
+svg {
+    display: block;
+}
+
+.axis text {
+    font-size: 10px;
+}
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    width: 120px;
+    height: 120px;
+    padding: 10px;
+    background: rgba(70, 130, 180, 0.9);
+    color: #fff;
+    border: 0px;
+    border-radius: 8px; 
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+    transform: translate(-50%, -100%); 
+}
+
+input[type="checkbox"], input[type="button"], button {
+    border: 0;
+    border-radius: 12px;
+    display: inline-block;
+    padding: 8px 16px;
+    margin-bottom: 4px;
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+    background-color: #4682B4;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+input[type="checkbox"]:hover, input[type="button"]:hover, button:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+input[type="checkbox"]:checked, input[type="button"]:active, button:active {
+    background-color: #5CACEE;
+}
