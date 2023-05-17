@@ -1,0 +1,16 @@
+moduleName,is_missing
+Coinbase #02,0.98982
+Coinbase #04,0.98982
+Bithumb #04,0.959671
+Bithumb #05,0.904072
+Digfinex #02,0.871966
+AscendEX #01,0.490995
+Binance #01 (Deposit),0.250979
+fee_collector,0.123336
+gov,0.100235
+Coinone #01(Deposit),0.029757
+bonded_tokens_pool,0.027016
+distribution,0.027016
+not_bonded_tokens_pool,0.027016
+
+가장 빈번한 누락 값: 0.027408

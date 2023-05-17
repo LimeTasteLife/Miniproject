@@ -1,0 +1,6 @@
+moduleName,is_missing
+Binance #01 (Deposit),0.370791
+fee_collector,0.05834
+gov,0.047377
+
+가장 빈번한 누락 값: 0.026233
