@@ -1,6 +1,0 @@
-moduleName,is_missing
-Binance #01 (Deposit),0.371784
-fee_collector,0.044813
-gov,0.036515
-
-Most Frequent Missing Value: 0.014108

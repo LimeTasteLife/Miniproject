@@ -1,5 +1,0 @@
-moduleName,is_missing
-gov,0.33444
-fee_collector,0.217427
-
-Most Frequent Missing Value: 0.03195
