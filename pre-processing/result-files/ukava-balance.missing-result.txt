@@ -1,5 +1,0 @@
-moduleName,is_missing
-gov,0.331637
-fee_collector,0.225529
-
-가장 빈번한 누락 값: 0.04307

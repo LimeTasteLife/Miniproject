@@ -1,0 +1,1 @@
+log scale로 바꿔서 그런가 add하고 mul하고 똑같이 나온다.
