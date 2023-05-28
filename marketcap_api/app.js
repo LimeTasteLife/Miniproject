@@ -5,23 +5,14 @@ const fs = require('fs');
 const api_key = '47c0ef90-470c-4a97-8ba6-2de570e3d418';
 
 const coinIds = {
-  BTC: 1,
-  ETH: 1027,
   COSMOS: 3794,
   JUNO: 14299,
-  CRO: 3635,
-  RUNE: 4157,
   KAVA: 4846,
   OSMO: 12220,
-  INJ: 7226,
-  FET: 3773,
-  BAND: 4679,
-  KDA: 5647,
-  MED: 2303
 }
 
 const fetchOHLCVData = async (id, symbol) => {
-  const url = `https://pro-api.coinmarketcap.com/v2/cryptocurrency/ohlcv/historical?id=${id}&time_start=2023-01-17&convert=USD&count=5000&time_period=hourly&interval=1h`;
+  const url = `https://pro-api.coinmarketcap.com/v2/cryptocurrency/ohlcv/historical?id=${id}&time_start=2023-04-14&convert=USD&count=5000&time_period=hourly&interval=1h`;
 
   const headers = {
     'X-CMC_PRO_API_KEY': api_key,
@@ -52,21 +43,15 @@ const main = async () => {
 
     for (const item of data) {
       const rowUSD = {
-        time_open: item.time_open,
-        time_close: item.time_close,
+        time_open: item.time_open.replace(/\"/gi, ""),
         open: item.quote.USD.open,
-        high: item.quote.USD.high,
-        low: item.quote.USD.low,
-        close: item.quote.USD.close,
-        volume: item.quote.USD.volume,
-        market_cap: item.quote.USD.market_cap,
       };
       csvDataUSD.push(rowUSD);
     }
 
-    const fields = ['time_open', 'time_close', 'open', 'high', 'low', 'close', 'volume', 'market_cap'];
+    const fields = ['time_open', 'open'];
     const csvUSD = json2csv(csvDataUSD, { fields });
-    fs.writeFileSync(`./${symbol}_USD(1h_3month).csv`, csvUSD);
+    fs.writeFileSync(`./${symbol}_USD.csv`, csvUSD);
   }
 
   console.log('All CSV files have been successfully created.');
