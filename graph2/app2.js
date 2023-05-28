@@ -38,7 +38,7 @@ svg
   .attr("y", 0)
   .attr("height", height)
   .attr("width", width)
-  .style("fill", "#C19CD3");
+  .style("fill", "#5CACEE");
 
  
 // Read the data
@@ -275,7 +275,7 @@ svg2
   .attr("y", 0)
   .attr("height", height2)
   .attr("width", width2)
-  .style("fill", "#C19CD3");
+  .style("fill", "#5CACEE");
 
 // Read the data
 // Scatter plot

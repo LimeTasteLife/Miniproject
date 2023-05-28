@@ -1,6 +1,0 @@
-moduleName,is_missing
-Juno Incentives for Prop 14,0.281519
-fee_collector,0.132341
-gov,0.128818
-
-가장 빈번한 누락 값: 0.030932

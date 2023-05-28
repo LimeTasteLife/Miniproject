@@ -1,11 +1,25 @@
-
-
 .env
 */.env/*
 
-*/.ipynb_checkpoints/*
-*/.ipynb_checkpoints
+.DS_Store
+*/.DS_Store
+/.ipynb_checkpoints/*
+/.ipynb_checkpoints
 
+<<<<<<< HEAD
 */missing-no/data/*
 */missing-no/result-files/*
 .DS_Store
+=======
+/LSTM-GRU/models
+/LSTM-GRU/models/*
+/LSTM-GRU/models/*.pb
+
+/pandas_ai_test/
+/pandas_ai_test/*
+
+/pre-processing/data/
+/pre-processing/result-files/
+/pre-processing/data/*
+/pre-processing/result-files/*
+>>>>>>> b1f1093742a3cf8fecc560a79417a8448234094d
