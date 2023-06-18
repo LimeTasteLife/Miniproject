@@ -21,3 +21,6 @@
 /pre-processing/result-files/
 /pre-processing/data/*
 /pre-processing/result-files/*
+
+*/node_modules/*
+*/node_modules

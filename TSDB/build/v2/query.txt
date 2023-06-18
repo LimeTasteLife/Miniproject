@@ -1,0 +1,54 @@
+========================================================================================
+module balance test2버전 atom, juno, kava, osmosis 따로 조회하기.
+따로 조회 안하면 데이터 너무 커서 뻑남.
+========================================================================================
+
+from(bucket: "InssaChain")
+  |> range(start: 0)
+  |> filter(fn: (r) => r._measurement == "testModuleBalance") 
+  |> filter(fn: (r) => r.version == "test2")
+  |> filter(fn: (r) => r.denom == "uatom")
+  |> pivot(rowKey:["_time"], columnKey: ["_field"], valueColumn: "_value")
+
+from(bucket: "InssaChain")
+  |> range(start: 0)
+  |> filter(fn: (r) => r._measurement == "testModuleBalance") 
+  |> filter(fn: (r) => r.version == "test2")
+  |> filter(fn: (r) => r.denom == "ujuno")
+  |> pivot(rowKey:["_time"], columnKey: ["_field"], valueColumn: "_value")
+
+from(bucket: "InssaChain")
+  |> range(start: 0)
+  |> filter(fn: (r) => r._measurement == "testModuleBalance") 
+  |> filter(fn: (r) => r.version == "test2")
+  |> filter(fn: (r) => r.denom == "ukava")
+  |> pivot(rowKey:["_time"], columnKey: ["_field"], valueColumn: "_value")
+
+from(bucket: "InssaChain")
+  |> range(start: 0)
+  |> filter(fn: (r) => r._measurement == "testModuleBalance") 
+  |> filter(fn: (r) => r.version == "test2")
+  |> filter(fn: (r) => r.denom == "uosmo")
+  |> pivot(rowKey:["_time"], columnKey: ["_field"], valueColumn: "_value")
+
+========================================================================================
+
+========================================================================================
+
+from(bucket: "InssaChain")
+  |> range(start: 0)
+  |> filter(fn: (r) => r._measurement == "testChainInfo") 
+  |> filter(fn: (r) => r.version == "test2")
+  |> pivot(rowKey:["_time"], columnKey: ["_field"], valueColumn: "_value")
+
+from(bucket: "InssaChain")
+  |> range(start: 0)
+  |> filter(fn: (r) => r._measurement == "testChainMarket") 
+  |> filter(fn: (r) => r.version == "test2")
+  |> pivot(rowKey:["_time"], columnKey: ["_field"], valueColumn: "_value")
+
+from(bucket: "InssaChain")
+  |> range(start: 0)
+  |> filter(fn: (r) => r._measurement == "testChainMarket") 
+  |> filter(fn: (r) => r.version == "test2")
+  |> pivot(rowKey:["_time"], columnKey: ["_field"], valueColumn: "_value")
